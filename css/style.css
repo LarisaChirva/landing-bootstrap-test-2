@@ -396,7 +396,8 @@ blockquote span{
 	margin-bottom: 22px;
 }
 .lets-talk-content p{
-	color: rgba(255, 255, 255, .75);
+	color: #fff;
+	opacity: .70;
 	margin-bottom: 40px;
 }
 .lets-talk-img{
