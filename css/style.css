@@ -28,6 +28,9 @@ textarea{
 /*STYLE RESET END*/
 
 /*DEFAULT CLASS START*/
+.grey-bg{
+	background-color: #f8f8f8;
+}
 .black-bg{
 	background-color: #111;
 }
@@ -64,7 +67,7 @@ textarea{
 
 .why-choose-us-title{
 	margin: 30px 0;
-	font-wight: 400;
+	font-weight: 400;
 	font-family: "Dosis";
 	font-size: 14px;
 	text-transform: uppercase;
@@ -87,9 +90,17 @@ blockquote{
 	color: #777;
 	line-height: 1.6;
 }
+
+blockquote p{
+	margin-bottom: 10px;
+}
+
 blockquote span{
 	font-size: 11px;
 	font-weight: 400;
+	letter-spacing: .2em;
+	text-transform: uppercase;
+	font-family: "Open Sans";
 }
 
 @media (max-width: 991px) {
@@ -101,6 +112,7 @@ blockquote span{
 .text-section{
 	font-size: 15px;
 	line-height: 1.73;
+	color: #777;
 }
 
 @media (max-width: 767px){
@@ -109,14 +121,15 @@ blockquote span{
 	}
 }
 @media (max-width: 599px) {
-		.about-us .title{
-			margin-bottom: 40px;
-		}
+	.about-us .title{
+		margin-bottom: 40px;
 	}
+}
 
 .why-choose-us-text{
 	font-size: 14px;
 	line-height: 1.85;
+	color: #777;
 }
 .btn{
 	letter-spacing: .2em;
@@ -143,8 +156,8 @@ blockquote span{
 }
 .rhomb-icon{
 	display: inline-block;
-	width: 23px;
-	height: 23px;
+	width: 24px;
+	height: 24px;
 	text-align: center;
 	line-height: 23px;
 	border-radius: 2px;
@@ -165,8 +178,8 @@ blockquote span{
 	border: 1px solid rgba(0, 0, 0, .7);
 }
 .rhomb-icon > * {
-	 transform: rotate(-45deg);
- }
+	transform: rotate(-45deg);
+}
 .grey-icon{
 	background-color: #e8e8e8;
 	color:#aaa;
@@ -176,7 +189,7 @@ blockquote span{
 	padding: 0 210px;
 }
 .icon{
-    font-size: 48px
+	font-size: 48px
 }
 .why-choose-us .row + .row{
 	margin-top: 82px;
@@ -228,7 +241,7 @@ blockquote span{
 
 .header-nav li{
 	display: inline-block;
-	font-family: sans-serif; 
+	font-family: sans-serif;
 	font-size: 11px;
 	color: rgba(255, 255, 255, .75);
 	letter-spacing: 0.3em;
@@ -342,7 +355,7 @@ blockquote span{
 	}
 }
 
-@media (max-width: 471px) {
+@media (max-width: 479px) {
 	.inner-content h6 {
 		text-indent: 0;
 	}
@@ -365,12 +378,12 @@ blockquote span{
 .team-person-info span + span{
 	margin-top: 12px;
 }
-.team-person-info.team-person-name{
+.team-person-info .team-person-name{
 	font-size: 15px;
 }
-.team-person-info.team-person-role{
-	font-size: 12px;
-}
+/*.team-person-info .team-person-role{*/
+/*font-size: 12px;*/
+/*}*/
 @media (max-width: 767px) {
 	.team-person{
 		margin-bottom: 30px;
@@ -399,10 +412,23 @@ blockquote span{
 	}
 }
 
+.nav.nav-tabs.text-center{
+	margin-top: 83px;
+}
+
+.portfolio{
+	padding-top: 140px;
+	margin-bottom: 5px;
+}
+
+.portfolio .tab-pane{
+	margin: 0 -3.5px;
+}
+
+
 .portfolio-tabs .tablist-title-portfolio{
 	display: inline-block;
 	font-size: 13px;
-	margin-top: 83px;
 	text-transform: uppercase;
 	font-family: "Dosis", sans-serif;
 	letter-spacing: .4em;
@@ -491,21 +517,23 @@ blockquote span{
 
 @media (max-width: 767px) {
 	.service-tabs .nav-tabs li{
-		width: 50%;
-		padding: 10px 0;
+		width: 33.333%;
+		padding: 20px 0;
 	}
 
-	.service-tabs .nav-tabs li:last-child{
-		float: none;
-		clear: both;
-		display: inline-block;
-		text-align: center;
+	.service-tabs .nav-tabs .width{
+		width: 50%;
 	}
+
+
+	/*.service-tabs .nav-tabs li:last-child{*/
+	/*}*/
 
 	.service-tabs .col-sm-6 + .col-sm-6{
 		margin-top: 20px;
 	}
 }
+
 @media (max-width: 599px) {
 	.portfolio .portfolio-img {
 		width: 100%;
@@ -514,11 +542,28 @@ blockquote span{
 	.tab-content {
 		margin-top: 30px;
 	}
+
+	.service-tabs .nav-tabs li{
+		width: 50%;
+	}
+
+	.service-tabs .nav-tabs li:last-child{
+		width: 100%;
+	}
 }
 
 .small-section{
 	padding: 68px 0;
 }
+
+.small-section .title{
+	margin-bottom: 0;
+}
+
+.small-section .btn.btn-default{
+	margin-top: 25px;
+}
+
 .rhomb-icon{
 	margin-right: 13px;
 }
@@ -550,6 +595,9 @@ blockquote span{
 	padding: 0 5px;
 	float: left;
 }
+
+
+
 .form-col-wrap{
 	overflow: hidden;
 	margin: 0 -5px;
@@ -579,10 +627,16 @@ blockquote span{
 	margin-bottom: 10px;
 }
 textarea.form-control{
-	max-height: 90px;
+	min-height: 90px;
 }
+
+.stay-informed .btn.btn-dark{
+	padding: 13px 20px;
+}
+
 .contact-us .form-col-span{
 	float: left;
+	line-height: 31px;
 }
 
 .contact-us .btn.btn-dark{
@@ -598,8 +652,13 @@ textarea.form-control{
 		float: none;
 		width: 100%;
 	}
-	.contact-us .form-col-span {
+	.contact-us .form-col-span,
+	.contact-us .btn.btn-dark{
 		float: none;
+	}
+
+	.contact-us .form-col-span{
+		padding-bottom: 10px;
 	}
 
 	.form-submit{
@@ -612,28 +671,46 @@ textarea.form-control{
 
 }
 
+@media (max-width: 479px) {
+	.stay-informed .form-control.width-input{
+		margin-bottom: 15px;
+	}
+}
+
 .stay-informed-title{
 	color: #111;
 	font-size: 16px;
 	text-transform: uppercase;
 	letter-spacing: .3em;
 	font-family: "Dosis";
-	font-weight: 400;
+	font-weight: 300;
 }
+
+.stay-informed-text{
+	color: #aaa;
+	font-size: 11px;
+}
+
 .stay-informed{
 	background-color: #f8f8f8;
 }
-.stay-informed-text span{
+
+.contact-us .form-submit{
+	margin-top: 20px;
+}
+
+.form-submit span{
 	font-size: 11px;
 	color: #aaa;
 }
+
 .width-input {
-	width: 293px;
+	max-width: 293px;
 	display: inline-block;
 }
 .stay-informed form{
 	text-align: center;
-	margin-top: 57px;
+	margin-top: 21px;
 	margin-bottom: 20px;
 }
 
@@ -655,9 +732,6 @@ textarea.form-control{
 	.width-input {
 		width: 100%;
 	}
-	.stay-informed .btn.btn-dark {
-		margin-top: 20px;
-	}
 }
 
 
@@ -667,11 +741,7 @@ textarea.form-control{
 	color: #999;
 	letter-spacing: .4em;
 	margin-top: 7px;
-}
-
-.latest-news-name {
 	display: inline-block;
-	float: left;
 }
 
 .latest-news-icon {
@@ -684,34 +754,40 @@ textarea.form-control{
 .news-img{
 	margin-bottom: 29px;
 }
+
 .news-img img{
 	width: 100%;
 }
-.btn.btn-excess{
-	padding: 8px 15px;
+
+.btn.btn-xs{
+	padding: 8px 14px;
 	font-size: 11px;
-	margin-top: 27px;
 	background-color: #e5e5e5;
-	border: none;
 	color: #777;
 }
 
-.btn.btn-excess:hover{
-background-color: #ececec;
+.btn.btn-xs:hover{
+	background-color: #ececec;
+}
+
+.news-title{
+	margin-bottom: 26px;
 }
 
 .latest-news-info{
-	font-family: "Dosis";
+	font-family: 'Dosis';
 	color: #999;
 	font-weight: 400;
-	letter-spacing: .4em;
+	letter-spacing: .2em;
 	text-transform: uppercase;
+	margin-bottom: 26px;
 }
 .latest-news-info span {
 	font-size: 11px;
 	letter-spacing: .2em;
 	display: inline-block;
-	margin: 15px 0 26px;
+	margin-top: 15px;
+	color: #999;
 }
 .latest-news-info a{
 	display: block;
@@ -723,15 +799,15 @@ background-color: #ececec;
 }
 
 @media (max-width: 991px) {
-	.latest-news .btn.btn-excess{
+	.latest-news .btn.btn-xs{
 		margin-bottom: 30px;
 	}
 	.latest-news-info {
-		letter-spacing: .2em;
+		letter-spacing: .1em;
 	}
 }
 
-@media (max-width: 471px) {
+@media (max-width: 479px) {
 	.latest-news .title .latest-news-name, .latest-news-icon {
 		float: none;
 	}
@@ -748,19 +824,32 @@ background-color: #ececec;
 }
 .footer{
 	padding: 140px 0 58px;
-	border-color: #f8f8f8;
+	text-align: center;
 }
 .logo-footer{
 	text-align: center;
 }
-.logo-footer img{
-	margin-bottom: 24px;
-	display: inline-block;
+.logo-footer{
+	margin-bottom: 25px;
 }
 
 .social-nav li{
 	display: inline-block;
 }
+
+.footer .social-nav li + li{
+	margin-left: 13px;
+}
+
+.footer .social-nav i{
+	padding-left: 2px;
+	padding-bottom: 2px;
+}
+
+.footer .social-nav .rhomb-icon{
+	margin-right: 0;
+}
+
 .social-nav .rhomb-icon:hover{
 	background-color: #111;
 	color: #fff;
@@ -889,7 +978,7 @@ background-color: #ececec;
 
 .map-icon{
 	display: inline-block;
-	margin-bottom: 24px;
+	margin-bottom: 28px;
 }
 
 .map-text{
@@ -900,28 +989,7 @@ background-color: #ececec;
 	font-size: 16px;
 	letter-spacing: .3em;
 	text-transform: uppercase;
+	opacity: .75;
 }
 
 /*CUSTOM STYLE END*/
-
-/*599 4*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
